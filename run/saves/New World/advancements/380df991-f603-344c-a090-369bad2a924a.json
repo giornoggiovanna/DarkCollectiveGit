@@ -1,0 +1,23 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2023-09-27 23:47:47 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2023-09-27 23:47:49 +0200",
+      "minecraft:meadow": "2023-09-27 23:48:22 +0200",
+      "minecraft:plains": "2023-09-27 23:50:05 +0200"
+    },
+    "done": false
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2023-09-27 23:48:51 +0200"
+    },
+    "done": true
+  },
+  "DataVersion": 3463
+}
