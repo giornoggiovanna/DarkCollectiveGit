@@ -4,6 +4,7 @@ import io.github.giornoggiovanna.darkcollective.DarkCollective;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SwordItem;
@@ -14,6 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DarkCollective.ModID);
 
+    //Cores
     public static final RegistryObject<Item> BASIC_ENERGY_CORE = ITEMS.register("basic_energy_core",
             () -> new Item(new Item.Properties()
                     .stacksTo(16)
@@ -46,7 +48,7 @@ public class ItemInit {
 
 
 
-
+    //Foods
     public static final RegistryObject<Item> PLASMA_BREAD = ITEMS.register("plasma_bread",
             () -> new Item(new Item.Properties()
                     .food(new FoodProperties.Builder()
@@ -55,5 +57,30 @@ public class ItemInit {
                             .effect(()-> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 2), 1)
                             .build()
                     )
+            ));
+
+    //Ingots
+    public static final RegistryObject<Item> AERNIUM_INGOT = ITEMS.register("aernium_ingot",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .fireResistant()
+            ));
+
+    //Generation Blocks
+    public static final RegistryObject<BlockItem> METEORITE_STONE = ITEMS.register("meteorite_stone",
+            ()-> new BlockItem(BlockInit.METEORITE_STONE.get(), new Item.Properties()
+                    .fireResistant()
+            ));
+
+    //Building Blocks
+    public static final RegistryObject<BlockItem> METEORITE_COBBLESTONE = ITEMS.register("meteorite_cobblestone",
+            ()-> new BlockItem(BlockInit.METEORITE_COBBLESTONE.get(), new Item.Properties()
+                    .fireResistant()
+            ));
+
+    //Ores
+    public static final RegistryObject<BlockItem> AERNIUM_ORE = ITEMS.register("aernium_ore",
+            ()-> new BlockItem(BlockInit.AERNIUM_ORE.get(), new Item.Properties()
+                    .fireResistant()
             ));
 }
