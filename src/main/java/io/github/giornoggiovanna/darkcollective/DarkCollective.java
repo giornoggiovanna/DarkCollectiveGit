@@ -1,6 +1,7 @@
 package io.github.giornoggiovanna.darkcollective;
 
 import io.github.giornoggiovanna.darkcollective.init.BlockInit;
+import io.github.giornoggiovanna.darkcollective.init.CreativeTabInit;
 import io.github.giornoggiovanna.darkcollective.init.ItemInit;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -16,5 +17,6 @@ public class DarkCollective {
 
         ItemInit.ITEMS.register(bus);
         BlockInit.BLOCKS.register(bus);
+        CreativeTabInit.TABS.register(bus);
     }
 }

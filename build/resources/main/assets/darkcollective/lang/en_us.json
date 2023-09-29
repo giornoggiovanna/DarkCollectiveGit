@@ -8,5 +8,7 @@
   "item.darkcollective.aernium_ingot": "Aernium Ingot",
   "block.darkcollective.meteorite_stone": "Meteorite Stone",
   "block.darkcollective.meteorite_cobblestone": "Meteorite Cobblestone",
-  "block.darkcollective.aernium_ore": "Aernium Ore"
+  "block.darkcollective.aernium_ore": "Aernium Ore",
+  "itemGroup.dark_collective_tab": "Dark Collective"
+
 }
