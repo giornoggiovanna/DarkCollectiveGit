@@ -36,4 +36,39 @@ public class BlockInit {
             .requiresCorrectToolForDrops()
             .pushReaction(PushReaction.IGNORE)
     ));
+
+    public static final RegistryObject<Block> ACTRIVIUM_ORE = BLOCKS.register("actrivium_ore", ()-> new Block(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_GRAY)
+            .strength(30f, 1200f)
+            .requiresCorrectToolForDrops()
+            .pushReaction(PushReaction.IGNORE)
+    ));
+
+    public static final RegistryObject<Block> ADVINTINIUM_ORE = BLOCKS.register("advintinium_ore", ()-> new Block(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_GRAY)
+            .strength(70f, 4000f)
+            .requiresCorrectToolForDrops()
+            .pushReaction(PushReaction.IGNORE)
+    ));
+
+    public static final RegistryObject<Block> ATRIVIUM_ORE = BLOCKS.register("atrivium_ore", ()-> new Block(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_GRAY)
+            .strength(35f, 2500f)
+            .requiresCorrectToolForDrops()
+            .pushReaction(PushReaction.IGNORE)
+    ));
+
+    public static final RegistryObject<Block> TRIVINDIUM_ORE = BLOCKS.register("trivindium_ore", ()-> new Block(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_GRAY)
+            .strength(60f, 3500f)
+            .requiresCorrectToolForDrops()
+            .pushReaction(PushReaction.IGNORE)
+    ));
+
+    public static final RegistryObject<Block> AERNIUM_BLOCK = BLOCKS.register("aernium_block", ()-> new Block(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_GRAY)
+            .strength(30f, 1200f)
+            .requiresCorrectToolForDrops()
+            .pushReaction(PushReaction.IGNORE)
+    ));
 }

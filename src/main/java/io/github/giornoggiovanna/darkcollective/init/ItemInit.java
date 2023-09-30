@@ -65,6 +65,71 @@ public class ItemInit {
                     .fireResistant()
             )));
 
+    public static final RegistryObject<Item> ADVINTINIUM_GEMS = addToTab(ITEMS.register("advintinium_gems",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .fireResistant()
+            )));
+
+    public static final RegistryObject<Item> ATRIVIUM_DUST = addToTab(ITEMS.register("atrivium_dust",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+            )));
+
+    public static final RegistryObject<BottleItem> BOTTLE_ACTRIVIUM = addToTab(ITEMS.register("bottle_actrivium",
+            ()-> new BottleItem(new Item.Properties()
+                    .stacksTo(16)
+            )));
+
+    public static final RegistryObject<Item> TRIVINDIUM_CRYSTAL = addToTab(ITEMS.register("trivindium_crystal",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .fireResistant()
+            )));
+
+    //Weapon Materials
+    public static final RegistryObject<Item> METEORITE_GUARD = addToTab(ITEMS.register("meteorite_guard",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .fireResistant()
+            )));
+
+    public static final RegistryObject<Item> METEORITE_HANDLE = addToTab(ITEMS.register("meteorite_handle",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .fireResistant()
+            )));
+
+    public static final RegistryObject<Item> METEORITE_STOCK = addToTab(ITEMS.register("meteorite_stock",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .fireResistant()
+            )));
+
+    public static final RegistryObject<Item> PLASMA_CONCENTRATOR = addToTab(ITEMS.register("plasma_concentrator",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .fireResistant()
+            )));
+
+    public static final RegistryObject<Item> PLASMA_EMISSION_BLADE = addToTab(ITEMS.register("plasma_emission_blade",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .fireResistant()
+            )));
+
+    public static final RegistryObject<Item> PLASMA_EMISSION_HEAD = addToTab(ITEMS.register("plasma_emission_head",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .fireResistant()
+            )));
+
+    public static final RegistryObject<Item> PLASMA_EMITTER = addToTab(ITEMS.register("plasma_emitter",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .fireResistant()
+            )));
+
     //Swords
     public static final RegistryObject<SwordItem> AERNIUM_SWORD = addToTab(ITEMS.register("aernium_sword",
             ()-> new SwordItem(
@@ -124,6 +189,26 @@ public class ItemInit {
 
     //Ores
     public static final RegistryObject<BlockItem> AERNIUM_ORE = addToTab(ITEMS.register("aernium_ore",
+            ()-> new BlockItem(BlockInit.AERNIUM_ORE.get(), new Item.Properties()
+                    .fireResistant()
+            )));
+
+    public static final RegistryObject<BlockItem> ACTRIVIUM_ORE = addToTab(ITEMS.register("actrivium_ore",
+            ()-> new BlockItem(BlockInit.AERNIUM_ORE.get(), new Item.Properties()
+                    .fireResistant()
+            )));
+
+    public static final RegistryObject<BlockItem> ATRIVIUM_ORE = addToTab(ITEMS.register("atrivium_ore",
+            ()-> new BlockItem(BlockInit.AERNIUM_ORE.get(), new Item.Properties()
+                    .fireResistant()
+            )));
+
+    public static final RegistryObject<BlockItem> TRIVINDIUM_ORE = addToTab(ITEMS.register("trivindium_ore",
+            ()-> new BlockItem(BlockInit.AERNIUM_ORE.get(), new Item.Properties()
+                    .fireResistant()
+            )));
+
+    public static final RegistryObject<BlockItem> AERNIUM_BLOCK = addToTab(ITEMS.register("aernium_block",
             ()-> new BlockItem(BlockInit.AERNIUM_ORE.get(), new Item.Properties()
                     .fireResistant()
             )));

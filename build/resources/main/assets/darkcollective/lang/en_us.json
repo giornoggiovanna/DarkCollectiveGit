@@ -5,22 +5,23 @@
   "item.darkcollective.ultimate_energy_core": "Ultimate Energy Core",
   "item.darkcollective.mothership_energy_core": "The Mothership Energy Core",
   "item.darkcollective.plasma_bread": "Plasma Enhanced Bread",
-<<<<<<< Updated upstream
-  "item.darkcollective.aernium_ingot": "Aeurium Ingot",
   "block.darkcollective.meteorite_stone": "Meteorite",
   "block.darkcollective.meteorite_cobblestone": "Cobbled Meteorite",
-  "block.darkcollective.aernium_ore": "Aeurium Ore",
-=======
+  "block.darkcollective.aernium_ore": "Aernium Ore",
+  "block.darkcollective.atrivium_ore": "Atrivium Ore",
+  "block.darkcollective.actrivium_ore": "Actrivium Ore",
+  "block.darkcollective.aernium_ore": "Trivindium Ore",
+  "block.darkcollective.aernium_block": "Block of Aernium",
   "item.darkcollective.aernium_ingot": "Aernium Ingot",
   "item.darkcollective.aernium_sword": "Aernium Sword",
   "item.darkcollective.aernium_hoe": "Aernium Hoe",
   "item.darkcollective.aernium_axe": "Aernium Axe",
   "item.darkcollective.aernium_shovel": "Aernium Shovel",
   "item.darkcollective.aernium_pickaxe": "Aernium Pickaxe",
-  "block.darkcollective.meteorite_stone": "Meteorite Stone",
-  "block.darkcollective.meteorite_cobblestone": "Meteorite Cobblestone",
-  "block.darkcollective.aernium_ore": "Aernium Ore",
->>>>>>> Stashed changes
+  "item.darkcollective.plasma_emitter": "Plasma Emitter",
+  "item.darkcollective.plasma_concentrator": "Plasma Concentrator",
+  "item.darkcollective.plasma_emission_blade": "Plasma Emission Blade",
+  "item.darkcollective.plasma_emission_head": "Plasma Emission Head",
   "itemGroup.dark_collective_tab": "Dark Collective"
 
 }
