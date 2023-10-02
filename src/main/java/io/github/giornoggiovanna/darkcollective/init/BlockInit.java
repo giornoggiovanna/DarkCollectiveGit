@@ -1,9 +1,11 @@
 package io.github.giornoggiovanna.darkcollective.init;
 
 import io.github.giornoggiovanna.darkcollective.DarkCollective;
+import io.github.giornoggiovanna.darkcollective.blocks.BlackStandBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -44,13 +46,6 @@ public class BlockInit {
             .pushReaction(PushReaction.IGNORE)
     ));
 
-    public static final RegistryObject<Block> ADVINTINIUM_ORE = BLOCKS.register("advintinium_ore", ()-> new Block(BlockBehaviour.Properties.of()
-            .mapColor(MapColor.COLOR_GRAY)
-            .strength(70f, 4000f)
-            .requiresCorrectToolForDrops()
-            .pushReaction(PushReaction.IGNORE)
-    ));
-
     public static final RegistryObject<Block> ATRIVIUM_ORE = BLOCKS.register("atrivium_ore", ()-> new Block(BlockBehaviour.Properties.of()
             .mapColor(MapColor.COLOR_GRAY)
             .strength(35f, 2500f)
@@ -71,4 +66,24 @@ public class BlockInit {
             .requiresCorrectToolForDrops()
             .pushReaction(PushReaction.IGNORE)
     ));
+
+    public static final RegistryObject<Block> BLACK_STAND = BLOCKS.register("black_stand", ()-> new BlackStandBlock(BlockBehaviour.Properties.of()
+            .dynamicShape()
+            .noOcclusion()
+            .mapColor(MapColor.COLOR_BLACK)
+            .strength(15, 500)
+            .requiresCorrectToolForDrops()
+    ));
+
+    public static final RegistryObject<Block> MOTHERSHIP_DARKTILES = BLOCKS.register("mothership_darktiles", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)));
+
+    public static final RegistryObject<Block> MOTHERSHIP_DARKTILES2 = BLOCKS.register("mothership_darktiles2", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)));
+
+    public static final RegistryObject<Block> MOTHERSHIP_WHITEBRICKS = BLOCKS.register("mothership_whitebricks", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)
+            .mapColor(MapColor.COLOR_LIGHT_GRAY)
+    ));
+
+    public static final RegistryObject<Block> WHITE_BRICK_LAMP = BLOCKS.register("white_brick_lamp", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN)));
+
+
 }

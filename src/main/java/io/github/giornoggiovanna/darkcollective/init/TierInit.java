@@ -14,4 +14,14 @@ public class TierInit {
             TagInit.NEEDS_AERNIUM_TOOL,
             () -> Ingredient.of(ItemInit.AERNIUM_INGOT::get)
     );
+
+    public static final ForgeTier PLASMAMK1 = new ForgeTier(
+            7,
+            4000,
+            2.0f,
+            4,
+            30,
+            TagInit.NEEDS_PLASMA_TOOL,
+            ()-> Ingredient.of(ItemInit.BASIC_ENERGY_CORE::get)
+    );
 }

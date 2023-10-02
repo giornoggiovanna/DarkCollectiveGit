@@ -139,6 +139,13 @@ public class ItemInit {
                      new Item.Properties()
             )));
 
+    public static final RegistryObject<SwordItem> PLASMA_SWORDMK1 = addToTab(ITEMS.register("plasma_swordmk1",
+            ()-> new SwordItem(
+                    TierInit.PLASMAMK1,
+                    15,
+                    2.5f,
+                    new Item.Properties()
+            )));
     //Pickaxes
     public static final RegistryObject<PickaxeItem> AERNIUM_PICKAXE = addToTab(ITEMS.register("aernium_pickaxe",
             ()-> new PickaxeItem(
@@ -146,6 +153,14 @@ public class ItemInit {
                     5,
                     2.5f,
                      new Item.Properties()
+            )));
+
+    public static final RegistryObject<PickaxeItem> PLASMA_PICKAXEMK1 = addToTab(ITEMS.register("plasma_pickaxemk1",
+            ()-> new PickaxeItem(
+                    TierInit.PLASMAMK1,
+                    7,
+                    2.5f,
+                    new Item.Properties()
             )));
 
     //Axes
@@ -157,6 +172,14 @@ public class ItemInit {
                      new Item.Properties()
             )));
 
+    public static final RegistryObject<AxeItem> PLASMA_AXEMK1 = addToTab(ITEMS.register("plasma_axemk1",
+            ()-> new AxeItem(
+                    TierInit.PLASMAMK1,
+                    16,
+                    2.5f,
+                    new Item.Properties()
+            )));
+
     //Hoes
     public static final RegistryObject<HoeItem> AERNIUM_HOE = addToTab(ITEMS.register("aernium_hoe",
             ()-> new HoeItem(
@@ -166,6 +189,14 @@ public class ItemInit {
                      new Item.Properties()
             )));
 
+    public static final RegistryObject<HoeItem> PLASMA_HOEMK1 = addToTab(ITEMS.register("plasma_hoemk1",
+            ()-> new HoeItem(
+                    TierInit.PLASMAMK1,
+                    7,
+                    2.5f,
+                    new Item.Properties()
+            )));
+
     //Shovels
     public static final RegistryObject<ShovelItem> AERNIUM_SHOVEL = addToTab(ITEMS.register("aernium_shovel",
             ()-> new ShovelItem(
@@ -173,6 +204,14 @@ public class ItemInit {
                     5,
                     2.5f,
                      new Item.Properties()
+            )));
+
+    public static final RegistryObject<ShovelItem> PLASMA_SHOVELMK1 = addToTab(ITEMS.register("plasma_shovelmk1",
+            ()-> new ShovelItem(
+                    TierInit.PLASMAMK1,
+                    7,
+                    2.5f,
+                    new Item.Properties()
             )));
 
     //Generation Blocks
@@ -187,6 +226,24 @@ public class ItemInit {
                     .fireResistant()
             )));
 
+    public static final RegistryObject<BlockItem> BLACK_STAND = addToTab(ITEMS.register("black_stand",
+            ()-> new BlockItem(BlockInit.BLACK_STAND.get(), new Item.Properties())));
+
+    public static final RegistryObject<BlockItem> MOTHERSHIP_DARKTILES = addToTab(ITEMS.register("mothership_darktiles",
+            ()-> new BlockItem(BlockInit.MOTHERSHIP_DARKTILES.get(), new Item.Properties())));
+
+    public static final RegistryObject<BlockItem> MOTHERSHIP_DARKTILES2 = addToTab(ITEMS.register("mothership_darktiles2",
+            ()-> new BlockItem(BlockInit.MOTHERSHIP_DARKTILES2.get(), new Item.Properties())));
+
+    public static final RegistryObject<BlockItem> MOTHERSHIP_WHITEBRICKS = addToTab(ITEMS.register("mothership_whitebricks",
+            ()-> new BlockItem(BlockInit.MOTHERSHIP_WHITEBRICKS .get(), new Item.Properties())));
+
+    public static final RegistryObject<BlockItem> WHITE_BRICK_LAMP = addToTab(ITEMS.register("white_brick_lamp",
+            ()-> new BlockItem(BlockInit.WHITE_BRICK_LAMP.get(), new Item.Properties())));
+
+
+
+
     //Ores
     public static final RegistryObject<BlockItem> AERNIUM_ORE = addToTab(ITEMS.register("aernium_ore",
             ()-> new BlockItem(BlockInit.AERNIUM_ORE.get(), new Item.Properties()
@@ -194,22 +251,23 @@ public class ItemInit {
             )));
 
     public static final RegistryObject<BlockItem> ACTRIVIUM_ORE = addToTab(ITEMS.register("actrivium_ore",
-            ()-> new BlockItem(BlockInit.AERNIUM_ORE.get(), new Item.Properties()
+            ()-> new BlockItem(BlockInit.ACTRIVIUM_ORE.get(), new Item.Properties()
                     .fireResistant()
             )));
 
     public static final RegistryObject<BlockItem> ATRIVIUM_ORE = addToTab(ITEMS.register("atrivium_ore",
-            ()-> new BlockItem(BlockInit.AERNIUM_ORE.get(), new Item.Properties()
+            ()-> new BlockItem(BlockInit.ATRIVIUM_ORE.get(), new Item.Properties()
                     .fireResistant()
             )));
 
     public static final RegistryObject<BlockItem> TRIVINDIUM_ORE = addToTab(ITEMS.register("trivindium_ore",
-            ()-> new BlockItem(BlockInit.AERNIUM_ORE.get(), new Item.Properties()
+            ()-> new BlockItem(BlockInit.TRIVINDIUM_ORE.get(), new Item.Properties()
                     .fireResistant()
             )));
 
     public static final RegistryObject<BlockItem> AERNIUM_BLOCK = addToTab(ITEMS.register("aernium_block",
-            ()-> new BlockItem(BlockInit.AERNIUM_ORE.get(), new Item.Properties()
+            ()-> new BlockItem(BlockInit.AERNIUM_BLOCK.get(), new Item.Properties()
                     .fireResistant()
             )));
+
 }
