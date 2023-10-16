@@ -5,6 +5,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -228,6 +229,9 @@ public class ItemInit {
 
     public static final RegistryObject<BlockItem> BLACK_STAND = addToTab(ITEMS.register("black_stand",
             ()-> new BlockItem(BlockInit.BLACK_STAND.get(), new Item.Properties())));
+
+    public static final RegistryObject<BlockItem> ORE_REFINERYMK1 = addToTab(ITEMS.register("ore_refinerymk1",
+            ()-> new BlockItem(BlockInit.ORE_REFINERYMK1.get(), new Item.Properties())));
 
     public static final RegistryObject<BlockItem> MOTHERSHIP_DARKTILES = addToTab(ITEMS.register("mothership_darktiles",
             ()-> new BlockItem(BlockInit.MOTHERSHIP_DARKTILES.get(), new Item.Properties())));

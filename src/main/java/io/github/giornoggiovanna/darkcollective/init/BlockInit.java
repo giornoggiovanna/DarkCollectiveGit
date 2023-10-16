@@ -2,6 +2,7 @@ package io.github.giornoggiovanna.darkcollective.init;
 
 import io.github.giornoggiovanna.darkcollective.DarkCollective;
 import io.github.giornoggiovanna.darkcollective.blocks.BlackStandBlock;
+import io.github.giornoggiovanna.darkcollective.blocks.OreRefineryMK1;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -73,6 +74,14 @@ public class BlockInit {
             .mapColor(MapColor.COLOR_BLACK)
             .strength(15, 500)
             .requiresCorrectToolForDrops()
+    ));
+
+    public static final RegistryObject<Block> ORE_REFINERYMK1 = BLOCKS.register("ore_refinerymk1", ()-> new OreRefineryMK1(BlockBehaviour.Properties.of()
+            .dynamicShape()
+            .noOcclusion()
+            .mapColor(MapColor.COLOR_BLACK)
+            .requiresCorrectToolForDrops()
+            .pushReaction(PushReaction.IGNORE)
     ));
 
     public static final RegistryObject<Block> MOTHERSHIP_DARKTILES = BLOCKS.register("mothership_darktiles", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)));
