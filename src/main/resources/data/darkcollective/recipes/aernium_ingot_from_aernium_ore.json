@@ -1,0 +1,12 @@
+{
+  "type": "darkcollective:ore_refining",
+  "ingredients": [
+    {
+      "item": "darkcollective:aernium_ore"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "darkcollective:aernium_ingot"
+  }
+}

@@ -4,6 +4,7 @@ import io.github.giornoggiovanna.darkcollective.init.BlockEntityInit;
 import io.github.giornoggiovanna.darkcollective.init.BlockInit;
 import io.github.giornoggiovanna.darkcollective.init.CreativeTabInit;
 import io.github.giornoggiovanna.darkcollective.init.ItemInit;
+import io.github.giornoggiovanna.darkcollective.recipe.RecipeInit;
 import io.github.giornoggiovanna.darkcollective.screen.MenuTypes;
 import io.github.giornoggiovanna.darkcollective.screen.OreRefineryScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -31,6 +32,9 @@ public class DarkCollective {
         CreativeTabInit.TABS.register(bus);
         BlockEntityInit.BLOCK_ENTITIES.register(bus);
         MenuTypes.MENUS.register(bus);
+        RecipeInit.SERIALIZERS.register(bus);
+
+
     }
 
     @Mod.EventBusSubscriber(modid = ModID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

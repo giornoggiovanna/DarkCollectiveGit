@@ -5,6 +5,7 @@ import io.github.giornoggiovanna.darkcollective.DarkCollective;
 import io.github.giornoggiovanna.darkcollective.blockentity.util.TickableBlockEntity;
 import io.github.giornoggiovanna.darkcollective.init.BlockEntityInit;
 import io.github.giornoggiovanna.darkcollective.init.ItemInit;
+import io.github.giornoggiovanna.darkcollective.recipe.OreRefineryRecipe;
 import io.github.giornoggiovanna.darkcollective.screen.OreRefineryMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -37,6 +38,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.plaf.basic.BasicComboBoxUI;
+import java.util.Optional;
 
 public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
 
@@ -46,7 +48,16 @@ public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
     public static final int OUTPUT_SLOT = 1;
     public static final int ENERGY_SLOT = 2;
 
-    private LazyOptional<IItemHandler> handlerLazyOptional = LazyOptional.empty();
+    private final ItemStackHandler inventory = new ItemStackHandler(3) {
+        @Override
+        protected void onContentsChanged(int slot) {
+            super.onContentsChanged(slot);
+            OreRefineryMK1Entity.this.setChanged();
+        }
+    };
+
+
+    private final LazyOptional<ItemStackHandler> optional = LazyOptional.of(() -> this.inventory);
 
     protected final ContainerData data;
     private int progress = 0;
@@ -75,7 +86,7 @@ public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
 
             @Override
             public int getCount() {
-                return 2;
+                return 3;
             }
         };
     }
@@ -83,7 +94,7 @@ public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
         if(cap == ForgeCapabilities.ITEM_HANDLER){
-            return handlerLazyOptional.cast();
+            return optional.cast();
         }
         return super.getCapability(cap, side);
     }
@@ -96,7 +107,7 @@ public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
     @Override
     public void invalidateCaps() {
         super.invalidateCaps();
-        handlerLazyOptional.invalidate();
+        optional.invalidate();
     }
 
     public void drops()
@@ -116,8 +127,8 @@ public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
 
     @Nullable
     @Override
-    public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        return new OreRefineryMenu(id, inventory, this, this.data);
+    public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
+        return new OreRefineryMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
     @Override
@@ -149,6 +160,8 @@ public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
         } else {
             resetProgress();
         }
+
+        System.out.println(progress);
     }
 
     private void resetProgress() {
@@ -156,7 +169,9 @@ public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
     }
 
     private void craftItem() {
-        ItemStack result = new ItemStack(ItemInit.AERNIUM_INGOT.get(), 1);
+        Optional<OreRefineryRecipe> recipe = getCurrentRecipe();
+        ItemStack result = recipe.get().getResultItem(getLevel().registryAccess());
+
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
 
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
@@ -169,13 +184,29 @@ public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
 
     private void increaseCraftingProgress() {
         progress++;
+        System.out.println("This is working");
     }
 
     private boolean hasRecipe() {
-        boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == ItemInit.AERNIUM_ORE.get();
-        ItemStack result = new ItemStack(ItemInit.AERNIUM_ORE.get());
+        Optional<OreRefineryRecipe> recipe = getCurrentRecipe();
 
-        return hasCraftingItem && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
+        System.out.println(recipe);
+
+        if(recipe.isEmpty()) {
+            return false;
+        }
+        ItemStack result = recipe.get().getResultItem(getLevel().registryAccess());
+
+        return canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
+    }
+
+    private Optional<OreRefineryRecipe> getCurrentRecipe() {
+        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
+        for(int i = 0; i < itemHandler.getSlots(); i++) {
+            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
+        }
+
+        return this.level.getRecipeManager().getRecipeFor(OreRefineryRecipe.Type.INSTANCE, inventory, level);
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {
@@ -184,5 +215,9 @@ public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
 
     private boolean canInsertAmountIntoOutputSlot(int count) {
         return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count <= this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
+    }
+
+    public LazyOptional<ItemStackHandler> getOptional() {
+        return this.optional;
     }
 }

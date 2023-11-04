@@ -11,6 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.Nullable;
 
@@ -21,23 +22,47 @@ public class OreRefineryMenu extends AbstractContainerMenu {
 
     public OreRefineryMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
         super(MenuTypes.OR_MENU.get(), pContainerId);
-        checkContainerSize(inv, 3);
+        checkContainerSize(inv, 2);
         blockEntity = ((OreRefineryMK1Entity) entity);
         this.level = inv.player.level();
         this.data = data;
 
+        if(entity instanceof OreRefineryMK1Entity be) {
+            this.blockEntity = be;
+        } else {
+            throw new IllegalStateException("Incorrect block entity class (%s) passed into ExampleMenu!"
+                    .formatted(blockEntity.getClass().getCanonicalName()));
+        }
+
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
+        createBlockEntityInventory(be);
 
-        this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler, 0, 68, 18));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1, 137, 29));
-            this.addSlot(new SlotItemHandler(iItemHandler, 2, 70, 62));
+        /*
+        *
+        * this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 59, 17));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 115, 35));
+            this.addSlot(new SlotItemHandler(iItemHandler, 2, 59, 52));
+
         });
+        *
+        * */
+
+
+
 
         addDataSlots(data);
     }
 
+
+    private void createBlockEntityInventory(OreRefineryMK1Entity be) {
+        be.getOptional().ifPresent(iItemHandler -> {
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 60, 16));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 116, 34));
+            this.addSlot(new SlotItemHandler(iItemHandler, 2, 60, 51));
+        });
+    }
 
 
     public OreRefineryMenu(int id, Inventory inv, FriendlyByteBuf extraData){
@@ -56,11 +81,6 @@ public class OreRefineryMenu extends AbstractContainerMenu {
         int progressArrowSize = 27; // This is the height in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
-    }
-
-
-    protected OreRefineryMenu(@Nullable MenuType<?> menuType, int id) {
-        super(menuType, id);
     }
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
@@ -119,21 +139,18 @@ public class OreRefineryMenu extends AbstractContainerMenu {
                 player, BlockInit.ORE_REFINERYMK1.get());
     }
 
-    private void addPlayerInventory(Inventory playerInventory){
-        for(int i = 0; i<3; ++i){
-            for(int l=0; l<9; ++l){
-                this.addSlot(new Slot(playerInventory, i, 8+l*18, 84+i*18));
+    private void addPlayerInventory(Inventory playerInventory) {
+        for (int i = 0; i < 3; ++i) {
+            for (int l = 0; l < 9; ++l) {
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 84 + i * 18));
             }
         }
-
     }
 
-    private void addPlayerHotbar(Inventory playerInventory){
-        for(int i=0; i<0; ++i){
-            this.addSlot(new Slot(playerInventory, i, 8+i+18, 142));
+    private void addPlayerHotbar(Inventory playerInventory) {
+        for (int i = 0; i < 9; ++i) {
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
         }
-
-
     }
 }
 

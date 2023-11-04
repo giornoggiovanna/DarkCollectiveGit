@@ -33,7 +33,7 @@ public class OreRefineryScreen extends AbstractContainerScreen<OreRefineryMenu> 
         int x = (width - imageWidth)/2;
         int y = (height - imageHeight)/2;
 
-        graphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
+        graphics.blit(TEXTURE, x, y, 0, 0, 0, 175, 165, 256, 256);
 
         renderProgressArrow(graphics, x, y);
     }

@@ -1,0 +1,12 @@
+{
+  "type": "darkcollective:ore_refining",
+  "ingredients": [
+    {
+      "item": "darkcollective:atrivium_ore"
+    }
+  ],
+  "output": {
+    "count": 3,
+    "item": "darkcollective:atrivium_dust"
+  }
+}
