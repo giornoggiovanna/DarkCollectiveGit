@@ -1,0 +1,12 @@
+{
+  "type": "darkcollective:ore_refining",
+  "ingredients": [
+    {
+      "item": "minecraft:coal_ore"
+    }
+  ],
+  "result": {
+    "count": 10,
+    "item": "minecraft:coal"
+  }
+}

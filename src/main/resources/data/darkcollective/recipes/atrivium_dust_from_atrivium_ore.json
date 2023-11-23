@@ -5,8 +5,8 @@
       "item": "darkcollective:atrivium_ore"
     }
   ],
-  "output": {
-    "count": 3,
+  "result": {
+    "count": 2,
     "item": "darkcollective:atrivium_dust"
   }
-}
+}`

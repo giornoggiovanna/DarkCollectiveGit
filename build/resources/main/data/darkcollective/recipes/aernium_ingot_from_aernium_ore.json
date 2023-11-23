@@ -5,8 +5,8 @@
       "item": "darkcollective:aernium_ore"
     }
   ],
-  "output": {
-    "count": 2,
+  "result": {
+    "count": 1,
     "item": "darkcollective:aernium_ingot"
   }
 }

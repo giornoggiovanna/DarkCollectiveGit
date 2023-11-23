@@ -1,0 +1,12 @@
+{
+  "type": "darkcollective:ore_refining",
+  "ingredients": [
+    {
+      "item": "minecraft:copper_ore"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "minecraft:copper_ingot"
+  }
+}

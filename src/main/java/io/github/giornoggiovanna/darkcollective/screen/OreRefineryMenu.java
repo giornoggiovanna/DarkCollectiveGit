@@ -2,18 +2,15 @@ package io.github.giornoggiovanna.darkcollective.screen;
 
 import io.github.giornoggiovanna.darkcollective.blockentity.OreRefineryMK1Entity;
 import io.github.giornoggiovanna.darkcollective.init.BlockInit;
+import io.github.giornoggiovanna.darkcollective.screen.slot.EnergyFuelSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
-import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
-import org.jetbrains.annotations.Nullable;
 
 public class OreRefineryMenu extends AbstractContainerMenu {
     public OreRefineryMK1Entity blockEntity;
@@ -22,7 +19,7 @@ public class OreRefineryMenu extends AbstractContainerMenu {
 
     public OreRefineryMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
         super(MenuTypes.OR_MENU.get(), pContainerId);
-        checkContainerSize(inv, 2);
+        checkContainerSize(inv, 3);
         blockEntity = ((OreRefineryMK1Entity) entity);
         this.level = inv.player.level();
         this.data = data;
@@ -38,35 +35,21 @@ public class OreRefineryMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
         createBlockEntityInventory(be);
 
-        /*
-        *
-        * this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler, 0, 59, 17));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1, 115, 35));
-            this.addSlot(new SlotItemHandler(iItemHandler, 2, 59, 52));
-
-        });
-        *
-        * */
-
-
-
-
         addDataSlots(data);
     }
 
 
     private void createBlockEntityInventory(OreRefineryMK1Entity be) {
-        be.getOptional().ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler, 0, 60, 16));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1, 116, 34));
-            this.addSlot(new SlotItemHandler(iItemHandler, 2, 60, 51));
+        be.getInventoryOptional().ifPresent(iItemHandler -> {
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 60, 17));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 116, 35));
+            this.addSlot(new EnergyFuelSlot(iItemHandler, 2, 60, 53));
         });
     }
 
 
     public OreRefineryMenu(int id, Inventory inv, FriendlyByteBuf extraData){
-        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(3));
+        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(6));
     }
 
 
@@ -78,7 +61,8 @@ public class OreRefineryMenu extends AbstractContainerMenu {
     public int getScaledProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);  // Max Progress
-        int progressArrowSize = 27; // This is the height in pixels of your arrow
+        int progressArrowSize = 38; // This is the height in pixels of your arrow
+
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
@@ -151,6 +135,26 @@ public class OreRefineryMenu extends AbstractContainerMenu {
         for (int i = 0; i < 9; ++i) {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
         }
+    }
+
+    public int getEnergy(){
+        return this.data.get(2);
+    }
+
+    public int getMaxEnergy(){
+        return this.data.get(3);
+    }
+
+    public int getBurnTime(){
+        return this.data.get(4);
+    }
+
+    public int getMaxBurnTime(){
+        return this.data.get(5);
+    }
+
+    public int getEnergyStoredScale(){
+        return (int) (((float)getEnergy()/(float)getMaxEnergy()) * 15);
     }
 }
 
