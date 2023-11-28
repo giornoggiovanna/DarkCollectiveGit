@@ -1,0 +1,14 @@
+{
+  "type": "darkcollective:ore_refining",
+  "ingredients": [
+    {
+      "item": "minecraft:lapis_ore"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "item": "minecraft:lapis_lazuli",
+    "experience": 2,
+    "cookingtime": 50
+  }
+}

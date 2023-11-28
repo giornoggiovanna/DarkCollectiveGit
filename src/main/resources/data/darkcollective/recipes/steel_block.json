@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "darkcollective:steel_ingot"
+    }
+  },
+  "result": {
+    "item": "darkcollective:steel_block"
+  }
+}

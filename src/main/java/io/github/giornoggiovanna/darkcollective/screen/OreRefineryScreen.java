@@ -40,7 +40,7 @@ public class OreRefineryScreen extends AbstractContainerScreen<OreRefineryMenu> 
 
         renderProgressArrow(graphics, x, y);
 
-        Component text = Component.literal("Energy" + menu.getEnergy() + " / " + menu.getMaxEnergy());
+        Component text = Component.literal("Energy " + menu.getEnergy() + " / " + menu.getMaxEnergy());
 
         if(isHovering(62, 35, 11, 15, mouseX, mouseY)){
             graphics.renderTooltip(this.font, text, mouseX, mouseY);

@@ -1,0 +1,12 @@
+{
+  "type": "darkcollective:ore_refining",
+  "ingredients": [
+    {
+      "item": "darkcollective:meteorite_cobbblestone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "darkcollective:meteorite_stone"
+  }
+}`

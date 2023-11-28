@@ -62,10 +62,18 @@ public class BlockInit {
     ));
 
     public static final RegistryObject<Block> AERNIUM_BLOCK = BLOCKS.register("aernium_block", ()-> new Block(BlockBehaviour.Properties.of()
-            .mapColor(MapColor.COLOR_GRAY)
+            .mapColor(MapColor.COLOR_LIGHT_BLUE)
             .strength(30f, 1200f)
             .requiresCorrectToolForDrops()
             .pushReaction(PushReaction.IGNORE)
+    ));
+
+    public static final RegistryObject<Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)
+            .mapColor(MapColor.COLOR_LIGHT_GRAY)
+    ));
+
+    public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+            .mapColor(MapColor.COLOR_GRAY)
     ));
 
     public static final RegistryObject<Block> BLACK_STAND = BLOCKS.register("black_stand", ()-> new BlackStandBlock(BlockBehaviour.Properties.of()
@@ -83,6 +91,8 @@ public class BlockInit {
             .requiresCorrectToolForDrops()
             .pushReaction(PushReaction.IGNORE)
     ));
+
+    public static final RegistryObject<Block> TITANIUM_ORE = BLOCKS.register("titanium_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));
 
     public static final RegistryObject<Block> MOTHERSHIP_DARKTILES = BLOCKS.register("mothership_darktiles", ()-> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)));
 

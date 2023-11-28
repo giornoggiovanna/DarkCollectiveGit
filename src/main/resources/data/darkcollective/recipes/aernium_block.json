@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "darkcollective:aernium_ingot"
+    }
+  },
+  "result": {
+    "item": "darkcollective:aernium_block"
+  }
+}

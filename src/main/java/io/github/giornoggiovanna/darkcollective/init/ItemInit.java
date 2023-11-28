@@ -59,6 +59,18 @@ public class ItemInit {
                     )
             )));
 
+    //Misc
+    public static final RegistryObject<Item> COMPACT_COAL = addToTab(ITEMS.register("compact_coal",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+            )));
+
+    public static final RegistryObject<Item> RIFTING_FLUX = addToTab(ITEMS.register("rifting_flux",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+                    .rarity(Rarity.EPIC)
+            )));
+
     //Ingots
     public static final RegistryObject<Item> AERNIUM_INGOT = addToTab(ITEMS.register("aernium_ingot",
             ()-> new Item(new Item.Properties()
@@ -86,6 +98,68 @@ public class ItemInit {
             ()-> new Item(new Item.Properties()
                     .stacksTo(64)
                     .fireResistant()
+            )));
+
+    public static final RegistryObject<Item> RAW_TITANITE = addToTab(ITEMS.register("raw_titanite",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+            )));
+
+    public static final RegistryObject<Item> TITANIUM_INGOT = addToTab(ITEMS.register("titanium_ingot",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+            )));
+
+    public static final RegistryObject<Item> STEEL_INGOT = addToTab(ITEMS.register("steel_ingot",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+            )));
+
+    public static final RegistryObject<Item> TITANIUM_NUGGET = addToTab(ITEMS.register("titanium_nugget",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+            )));
+
+    public static final RegistryObject<Item> STEEL_NUGGET = addToTab(ITEMS.register("steel_nugget",
+            ()-> new Item(new Item.Properties()
+                    .stacksTo(64)
+            )));
+
+    //Canisters
+    public static final RegistryObject<Item> BIOMASS_CANISTER = addToTab(ITEMS.register("biomass_canister",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(16)
+                    .rarity(Rarity.COMMON)
+            )));
+
+    public static final RegistryObject<Item> LAVA_CANISTER = addToTab(ITEMS.register("lava_canister",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(16)
+                    .rarity(Rarity.COMMON)
+            )));
+
+    public static final RegistryObject<Item> WATER_CANISTER = addToTab(ITEMS.register("water_canister",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(16)
+                    .rarity(Rarity.COMMON)
+            )));
+
+    public static final RegistryObject<Item> XP_CANISTER = addToTab(ITEMS.register("xp_canister",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(16)
+                    .rarity(Rarity.COMMON)
+            )));
+
+    public static final RegistryObject<Item> PLASMA_CANISTER = addToTab(ITEMS.register("plasma_canister",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(16)
+                    .rarity(Rarity.COMMON)
+            )));
+
+    public static final RegistryObject<Item> EMPTY_CANISTER = addToTab(ITEMS.register("empty_canister",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(16)
+                    .rarity(Rarity.COMMON)
             )));
 
     //Weapon Materials
@@ -132,85 +206,50 @@ public class ItemInit {
             )));
 
     //Swords
-    public static final RegistryObject<SwordItem> AERNIUM_SWORD = addToTab(ITEMS.register("aernium_sword",
-            ()-> new SwordItem(
-                    TierInit.AERNIUM,
-                    13,
-                    2.5f,
-                     new Item.Properties()
-            )));
 
     public static final RegistryObject<SwordItem> PLASMA_SWORDMK1 = addToTab(ITEMS.register("plasma_swordmk1",
             ()-> new SwordItem(
                     TierInit.PLASMAMK1,
-                    15,
+                    12,
                     2.5f,
                     new Item.Properties()
             )));
     //Pickaxes
-    public static final RegistryObject<PickaxeItem> AERNIUM_PICKAXE = addToTab(ITEMS.register("aernium_pickaxe",
-            ()-> new PickaxeItem(
-                    TierInit.AERNIUM,
-                    5,
-                    2.5f,
-                     new Item.Properties()
-            )));
 
     public static final RegistryObject<PickaxeItem> PLASMA_PICKAXEMK1 = addToTab(ITEMS.register("plasma_pickaxemk1",
             ()-> new PickaxeItem(
                     TierInit.PLASMAMK1,
-                    7,
+                    4,
                     2.5f,
                     new Item.Properties()
             )));
 
     //Axes
-    public static final RegistryObject<AxeItem> AERNIUM_AXE = addToTab(ITEMS.register("aernium_axe",
-            ()-> new AxeItem(
-                    TierInit.AERNIUM,
-                    16,
-                    2.5f,
-                     new Item.Properties()
-            )));
 
     public static final RegistryObject<AxeItem> PLASMA_AXEMK1 = addToTab(ITEMS.register("plasma_axemk1",
             ()-> new AxeItem(
                     TierInit.PLASMAMK1,
-                    16,
-                    2.5f,
+                    14,
+                    0.9f,
                     new Item.Properties()
             )));
 
     //Hoes
-    public static final RegistryObject<HoeItem> AERNIUM_HOE = addToTab(ITEMS.register("aernium_hoe",
-            ()-> new HoeItem(
-                    TierInit.AERNIUM,
-                    5,
-                    2.5f,
-                     new Item.Properties()
-            )));
 
     public static final RegistryObject<HoeItem> PLASMA_HOEMK1 = addToTab(ITEMS.register("plasma_hoemk1",
             ()-> new HoeItem(
                     TierInit.PLASMAMK1,
-                    7,
+                    4,
                     2.5f,
                     new Item.Properties()
             )));
 
     //Shovels
-    public static final RegistryObject<ShovelItem> AERNIUM_SHOVEL = addToTab(ITEMS.register("aernium_shovel",
-            ()-> new ShovelItem(
-                    TierInit.AERNIUM,
-                    5,
-                    2.5f,
-                     new Item.Properties()
-            )));
 
     public static final RegistryObject<ShovelItem> PLASMA_SHOVELMK1 = addToTab(ITEMS.register("plasma_shovelmk1",
             ()-> new ShovelItem(
                     TierInit.PLASMAMK1,
-                    7,
+                    4,
                     2.5f,
                     new Item.Properties()
             )));
@@ -273,5 +312,18 @@ public class ItemInit {
             ()-> new BlockItem(BlockInit.AERNIUM_BLOCK.get(), new Item.Properties()
                     .fireResistant()
             )));
+
+    public static final RegistryObject<BlockItem> TITANIUM_ORE = addToTab(ITEMS.register("titanium_ore",
+            ()-> new BlockItem(BlockInit.TITANIUM_ORE.get(), new Item.Properties()
+            )));
+
+    public static final RegistryObject<BlockItem> TITANIUM_BLOCK = addToTab(ITEMS.register("titanium_block",
+            ()-> new BlockItem(BlockInit.TITANIUM_BLOCK.get(), new Item.Properties()
+            )));
+
+    public static final RegistryObject<BlockItem> STEEL_BLOCK = addToTab(ITEMS.register("steel_block",
+            ()-> new BlockItem(BlockInit.STEEL_BLOCK.get(), new Item.Properties()
+            )));
+
 
 }
