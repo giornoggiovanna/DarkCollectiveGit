@@ -1,15 +1,12 @@
 package io.github.giornoggiovanna.darkcollective.blocks;
 
 import io.github.giornoggiovanna.darkcollective.blockentity.OreRefineryMK1Entity;
-import io.github.giornoggiovanna.darkcollective.blockentity.util.TickableBlockEntity;
 import io.github.giornoggiovanna.darkcollective.init.BlockEntityInit;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;

@@ -2,6 +2,7 @@ package io.github.giornoggiovanna.darkcollective.init;
 
 import io.github.giornoggiovanna.darkcollective.DarkCollective;
 import io.github.giornoggiovanna.darkcollective.blocks.BlackStandBlock;
+import io.github.giornoggiovanna.darkcollective.blocks.FabricatorMK1;
 import io.github.giornoggiovanna.darkcollective.blocks.OreRefineryMK1;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -12,6 +13,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.RegistryObject;
 
 public class BlockInit {
@@ -85,6 +87,14 @@ public class BlockInit {
     ));
 
     public static final RegistryObject<Block> ORE_REFINERYMK1 = BLOCKS.register("ore_refinerymk1", ()-> new OreRefineryMK1(BlockBehaviour.Properties.of()
+            .dynamicShape()
+            .noOcclusion()
+            .mapColor(MapColor.COLOR_BLACK)
+            .requiresCorrectToolForDrops()
+            .pushReaction(PushReaction.IGNORE)
+    ));
+
+    public static final RegistryObject<Block> FABRICATORMK1 = BLOCKS.register("fabricatormk1", ()-> new FabricatorMK1(BlockBehaviour.Properties.of()
             .dynamicShape()
             .noOcclusion()
             .mapColor(MapColor.COLOR_BLACK)

@@ -28,14 +28,11 @@ import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.energy.EnergyStorage;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
-
-import static net.minecraftforge.common.ForgeHooks.getBurnTime;
 
 public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
 
@@ -287,15 +284,15 @@ public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
         }
     }
 
-    public int getBurnTime(ItemStack stack){
+    protected int getBurnTime(ItemStack stack){
         return ForgeHooks.getBurnTime(stack, RecipeType.SMELTING);
     }
 
-    public boolean canBurn(ItemStack stackInSlot) {
+    protected boolean canBurn(ItemStack stackInSlot) {
         return getBurnTime(stackInSlot) > 0;
     }
 
-    public boolean hasEnergyToCraft(int eReducRate, int currentEnergy){
+    protected boolean hasEnergyToCraft(int eReducRate, int currentEnergy){
         return (currentEnergy >= eReducRate) ? true : false;
     }
 
