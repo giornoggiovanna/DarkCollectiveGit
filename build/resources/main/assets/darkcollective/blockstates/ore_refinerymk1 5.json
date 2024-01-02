@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": {"model": "darkcollective:block/ore_refinerymk1" },
-    "facing=east": {"model": "darkcollective:block/ore_refinerymk1", "y":  90},
-    "facing=south": {"model": "darkcollective:block/ore_refinerymk1", "y": 180 },
-    "facing=west": {"model": "darkcollective:block/ore_refinerymk1", "y": 270 }
-  }
-}

@@ -18,4 +18,6 @@ public class MenuTypes{
             DeferredRegister.create(ForgeRegistries.MENU_TYPES, DarkCollective.ModID);
 
     public static final RegistryObject<MenuType> OR_MENU = MENUS.register("or_menu", () -> IForgeMenuType.create(OreRefineryMenu::new));
+
+    public static final RegistryObject<MenuType> FAB_MENU = MENUS.register("fab_menu", ()-> IForgeMenuType.create(FabricatorMenu::new));
 }

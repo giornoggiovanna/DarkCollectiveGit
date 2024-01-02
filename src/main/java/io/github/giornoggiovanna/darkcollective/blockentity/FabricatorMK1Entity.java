@@ -5,6 +5,7 @@ import io.github.giornoggiovanna.darkcollective.blockentity.util.CustomEnergySto
 import io.github.giornoggiovanna.darkcollective.blocks.FabricatorMK1;
 import io.github.giornoggiovanna.darkcollective.init.BlockEntityInit;
 import io.github.giornoggiovanna.darkcollective.recipe.OreRefineryRecipe;
+import io.github.giornoggiovanna.darkcollective.screen.FabricatorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -172,7 +173,7 @@ public class FabricatorMK1Entity extends BlockEntity implements MenuProvider {
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int containerId, Inventory inventory, Player player) {
-        return ;
+        return new FabricatorMenu(containerId, inventory, this, this.data);
     }
 
     @Override
