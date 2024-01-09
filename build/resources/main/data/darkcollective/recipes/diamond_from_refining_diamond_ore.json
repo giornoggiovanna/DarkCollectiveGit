@@ -1,0 +1,14 @@
+{
+  "type": "darkcollective:ore_refining",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond_ore"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "minecraft:diamond",
+    "experience": 2,
+    "cookingtime": 50
+  }
+}

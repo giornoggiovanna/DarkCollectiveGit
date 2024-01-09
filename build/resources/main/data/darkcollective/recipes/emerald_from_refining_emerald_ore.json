@@ -1,0 +1,14 @@
+{
+  "type": "darkcollective:ore_refining",
+  "ingredients": [
+    {
+      "item": "minecraft:emerald_ore"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "minecraft:emerald",
+    "experience": 2,
+    "cookingtime": 50
+  }
+}

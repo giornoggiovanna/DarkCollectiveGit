@@ -13,5 +13,10 @@ public class RecipeInit {
     public static final RegistryObject<RecipeSerializer<OreRefineryRecipe>> ORE_REFINERY_SERIALIZER = SERIALIZERS.register
             ("ore_refining",
             ()-> OreRefineryRecipe.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<FabricatorRecipe>> FABRICATOR_SERIALIZER = SERIALIZERS.register
+            ("fabricating",
+            ()-> FabricatorRecipe.Serializer.INSTANCE);
+
+
 
 }

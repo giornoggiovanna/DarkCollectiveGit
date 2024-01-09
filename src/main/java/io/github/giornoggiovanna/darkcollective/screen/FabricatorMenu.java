@@ -42,13 +42,13 @@ public class FabricatorMenu extends AbstractContainerMenu {
 
     private void createBlockEntityInventory(FabricatorMK1Entity be) {
         be.getInventoryOptional().ifPresent(iItemHandler ->{
-            this.addSlot(new SlotItemHandler(iItemHandler, 0, 6, 34));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1, 42, 16));
-            this.addSlot(new SlotItemHandler(iItemHandler, 2, 78, 7));
-            this.addSlot(new SlotItemHandler(iItemHandler, 3, 114, 16));
-            this.addSlot(new SlotItemHandler(iItemHandler, 4, 150, 34));
-            this.addSlot(new SlotItemHandler(iItemHandler, 5, 78, 61));
-            this.addSlot(new SlotItemHandler(iItemHandler, 6, 41, 61));
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 7, 35));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 43, 17));
+            this.addSlot(new SlotItemHandler(iItemHandler, 2, 79, 8));
+            this.addSlot(new SlotItemHandler(iItemHandler, 3, 115, 17));
+            this.addSlot(new SlotItemHandler(iItemHandler, 4, 151, 35));
+            this.addSlot(new SlotItemHandler(iItemHandler, 5, 79, 62));
+            this.addSlot(new SlotItemHandler(iItemHandler, 6, 42, 62));
         });
     }
 

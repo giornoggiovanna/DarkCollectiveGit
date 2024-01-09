@@ -4,7 +4,7 @@ import io.github.giornoggiovanna.darkcollective.DarkCollective;
 import io.github.giornoggiovanna.darkcollective.blockentity.util.CustomEnergyStorage;
 import io.github.giornoggiovanna.darkcollective.blocks.FabricatorMK1;
 import io.github.giornoggiovanna.darkcollective.init.BlockEntityInit;
-import io.github.giornoggiovanna.darkcollective.recipe.OreRefineryRecipe;
+import io.github.giornoggiovanna.darkcollective.recipe.FabricatorRecipe;
 import io.github.giornoggiovanna.darkcollective.screen.FabricatorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -232,7 +232,7 @@ public class FabricatorMK1Entity extends BlockEntity implements MenuProvider {
     }
 
     private void craftItem() {
-        Optional<OreRefineryRecipe> recipe = getCurrentRecipe();
+        Optional<FabricatorRecipe> recipe = getCurrentRecipe();
         ItemStack result = recipe.get().getResultItem(getLevel().registryAccess());
 
         this.itemHandler.extractItem(INPUT_SLOT1, 1, false);
@@ -255,7 +255,7 @@ public class FabricatorMK1Entity extends BlockEntity implements MenuProvider {
     }
 
     private boolean hasRecipe() {
-        Optional<OreRefineryRecipe> recipe = getCurrentRecipe();
+        Optional<FabricatorRecipe> recipe = getCurrentRecipe();
 
         if(recipe.isEmpty()) {
             return false;
@@ -265,13 +265,13 @@ public class FabricatorMK1Entity extends BlockEntity implements MenuProvider {
         return canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
     }
 
-    private Optional<OreRefineryRecipe> getCurrentRecipe() {
+    private Optional<FabricatorRecipe> getCurrentRecipe() {
         SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
         for(int i = 0; i < itemHandler.getSlots(); i++) {
             inventory.setItem(i, this.itemHandler.getStackInSlot(i));
         }
 
-        return this.level.getRecipeManager().getRecipeFor(OreRefineryRecipe.Type.INSTANCE, inventory, level);
+        return this.level.getRecipeManager().getRecipeFor(FabricatorRecipe.Type.INSTANCE, inventory, level);
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {

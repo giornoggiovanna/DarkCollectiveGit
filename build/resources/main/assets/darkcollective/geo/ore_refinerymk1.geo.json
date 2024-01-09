@@ -1,0 +1,106 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ore_refinerymk1",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "orerefinery",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "pistons",
+					"parent": "orerefinery",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "piston1",
+					"parent": "pistons",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-21, 15, -16], "size": [8, 16, 8], "uv": [0, 122]}
+					]
+				},
+				{
+					"name": "piston3",
+					"parent": "pistons",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-21, 15, 8], "size": [8, 16, 8], "uv": [0, 62]}
+					]
+				},
+				{
+					"name": "piston2",
+					"parent": "pistons",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-21, 15, -4], "size": [8, 16, 8], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "flaps",
+					"parent": "orerefinery",
+					"pivot": [3, 26, 0]
+				},
+				{
+					"name": "flap1",
+					"parent": "flaps",
+					"pivot": [3, 26, 0],
+					"cubes": [
+						{"origin": [2, 23, -3], "size": [10, 1, 6], "pivot": [0, 0, 0], "rotation": [0, 0, -20], "uv": [0, 39]}
+					]
+				},
+				{
+					"name": "flap2",
+					"parent": "flaps",
+					"pivot": [3, 26, -8],
+					"cubes": [
+						{"origin": [2, 23, -11], "size": [10, 1, 6], "pivot": [0, 0, 0], "rotation": [0, 0, -20], "uv": [24, 122]}
+					]
+				},
+				{
+					"name": "flap3",
+					"parent": "flaps",
+					"pivot": [3, 26, 16],
+					"cubes": [
+						{"origin": [2, 23, 13], "size": [10, 1, 6], "pivot": [0, 0, 0], "rotation": [0, 0, -20], "uv": [88, 122]}
+					]
+				},
+				{
+					"name": "flap4",
+					"parent": "flaps",
+					"pivot": [3, 26, 8],
+					"cubes": [
+						{"origin": [2, 23, 5], "size": [10, 1, 6], "pivot": [0, 0, 0], "rotation": [0, 0, -20], "uv": [56, 122]}
+					]
+				},
+				{
+					"name": "flap5",
+					"parent": "flaps",
+					"pivot": [3, 26, -16],
+					"cubes": [
+						{"origin": [2, 23, -19], "size": [10, 1, 6], "pivot": [0, 0, 0], "rotation": [0, 0, -20], "uv": [120, 122]}
+					]
+				},
+				{
+					"name": "base",
+					"parent": "orerefinery",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-17, 7, -22], "size": [44, 16, 44], "pivot": [0, 0, 0], "rotation": [0, 0, -20], "uv": [0, 62]},
+						{"origin": [-24, 0, -23], "size": [48, 16, 46], "uv": [0, 0]},
+						{"origin": [-7, 0, -24], "size": [14, 14, 1], "uv": [0, 24]},
+						{"origin": [-7, 0, 23], "size": [14, 14, 1], "uv": [0, 86]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "darkcollective:raw_titanite"
+  },
+  "result": "darkcollective:titanium_ingot",
+  "experience": 1,
+  "cookingtime": 100
+}

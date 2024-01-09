@@ -1,0 +1,12 @@
+{
+  "type": "darkcollective:ore_refining",
+  "ingredients": [
+    {
+      "item": "minecraft:redstone_ore"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "item": "minecraft:redstone"
+  }
+}

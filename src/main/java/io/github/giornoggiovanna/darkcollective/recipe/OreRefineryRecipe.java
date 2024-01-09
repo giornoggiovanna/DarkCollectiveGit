@@ -17,7 +17,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.io.Serial;
 
-public class OreRefineryRecipe implements Recipe<SimpleContainer> {
+public class    OreRefineryRecipe implements Recipe<SimpleContainer> {
 
     private final NonNullList<Ingredient> inputItems;
     private final ItemStack output;

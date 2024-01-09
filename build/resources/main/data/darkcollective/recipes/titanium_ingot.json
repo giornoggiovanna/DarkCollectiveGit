@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "darkcollective:titanium_nugget"
+    }
+  },
+  "result": {
+    "item": "darkcollective:titanium_ingot"
+  }
+}

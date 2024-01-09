@@ -29,10 +29,7 @@ import org.jetbrains.annotations.Nullable;
 
 
 
-        private static final VoxelShape NORTHSHAPE = makeNorthShape();
-        public static final VoxelShape EASTSHAPE = makeEastShape();
-        public static final VoxelShape SOUTHSHAPE = makeSouthShape();
-        public static final VoxelShape WESTSHAPE = makeWestShape();
+        private static final VoxelShape SHAPE = makeShape();
 
         public OreRefineryMK1(BlockBehaviour.Properties properties) {
             super(properties);
@@ -40,10 +37,10 @@ import org.jetbrains.annotations.Nullable;
 
         @Override
         public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
-            return NORTHSHAPE;
+            return SHAPE;
         }
 
-        public static VoxelShape makeNorthShape(){
+        public static VoxelShape makeShape(){
             VoxelShape shape = Shapes.empty();
             shape = Shapes.join(shape, Shapes.box(-1, -0.4375, -1, 2, 0.1875, 2), BooleanOp.OR);
             shape = Shapes.join(shape, Shapes.box(0.1875, 0.1875, -1, 0.5, 1.375, 2), BooleanOp.OR);
@@ -65,47 +62,6 @@ import org.jetbrains.annotations.Nullable;
             return shape;
         }
 
-        public static VoxelShape makeEastShape(){
-            VoxelShape shape = Shapes.empty();
-            shape = Shapes.join(shape, Shapes.box(0.875, 0.625, 0.375, 0.9375, 0.8125, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0.875, 0, 0.375, 0.9375, 0.1875, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0.625, 0.875, 0.375, 0.8125, 0.9375, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0, 0.875, 0.375, 0.1875, 0.9375, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(-0.4375, 0.3125, 0.4375, 0.75, 0.375, 0.5625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0.9375, 0, 0.375, 1, 0.9375, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0, 0.9375, 0.375, 1, 1, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0, 0.75, 0.4375, 0.3125, 0.8125, 0.5625), BooleanOp.OR);
-
-            return shape;
-        }
-
-        public static VoxelShape makeSouthShape(){
-            VoxelShape shape = Shapes.empty();
-            shape = Shapes.join(shape, Shapes.box(0.875, 0.625, 0.375, 0.9375, 0.8125, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0.875, 0, 0.375, 0.9375, 0.1875, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0.625, 0.875, 0.375, 0.8125, 0.9375, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0, 0.875, 0.375, 0.1875, 0.9375, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(-0.4375, 0.3125, 0.4375, 0.75, 0.375, 0.5625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0.9375, 0, 0.375, 1, 0.9375, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0, 0.9375, 0.375, 1, 1, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0, 0.75, 0.4375, 0.3125, 0.8125, 0.5625), BooleanOp.OR);
-
-            return shape;
-        }
-
-        public static VoxelShape makeWestShape(){
-            VoxelShape shape = Shapes.empty();
-            shape = Shapes.join(shape, Shapes.box(0.875, 0.625, 0.375, 0.9375, 0.8125, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0.875, 0, 0.375, 0.9375, 0.1875, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0.625, 0.875, 0.375, 0.8125, 0.9375, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0, 0.875, 0.375, 0.1875, 0.9375, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(-0.4375, 0.3125, 0.4375, 0.75, 0.375, 0.5625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0.9375, 0, 0.375, 1, 0.9375, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0, 0.9375, 0.375, 1, 1, 0.625), BooleanOp.OR);
-            shape = Shapes.join(shape, Shapes.box(0, 0.75, 0.4375, 0.3125, 0.8125, 0.5625), BooleanOp.OR);
-
-            return shape;
-        }
 
         @Nullable
         @Override

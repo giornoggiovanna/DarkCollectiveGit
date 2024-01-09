@@ -1,7 +1,6 @@
 package io.github.giornoggiovanna.darkcollective.blocks;
 
 import io.github.giornoggiovanna.darkcollective.blockentity.FabricatorMK1Entity;
-import io.github.giornoggiovanna.darkcollective.blockentity.OreRefineryMK1Entity;
 import io.github.giornoggiovanna.darkcollective.init.BlockEntityInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -11,6 +10,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
@@ -25,6 +25,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.gameevent.GameEventListener;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
+import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.network.NetworkHooks;
@@ -35,10 +36,10 @@ public class FabricatorMK1 extends BaseEntityBlock {
         super(properties);
     }
 
-    public VoxelShape getShape() {
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
         return shape;
     }
-
     private VoxelShape shape = makeShape();
 
     public VoxelShape makeShape(){
@@ -99,7 +100,7 @@ public class FabricatorMK1 extends BaseEntityBlock {
     }
 
     @Override
-    public RenderShape getRenderShape(BlockState p_49232_) {
+    public RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;
     }
 

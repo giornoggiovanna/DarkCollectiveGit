@@ -1,0 +1,29 @@
+{
+  "type": "darkcollective:fabricating",
+  "ingredients": [
+      {
+        "count": "5",
+        "item": "darkcollective:aernium_ingot"
+      },
+      {
+        "count": "20",
+        "item": "darkcollective:meteorite_cobblestone"
+      },
+      {
+        "count": "30",
+        "item": "darkcollective:steel_ingot"
+      },
+      {
+        "count": "15",
+        "item": "darkcollective:titanium_ingot"
+      },
+      {
+        "item": "darkcollective:plasma_canister"
+      }
+  ],
+  "result": {
+    "count": 1,
+    "item": "darkcollective:basic_energy_core",
+    "experience": 2
+  }
+}

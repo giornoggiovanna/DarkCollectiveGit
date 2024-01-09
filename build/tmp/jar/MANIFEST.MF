@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: darkcollective
+Specification-Vendor: BlueFFlame, Lightivghi, Kevin
+Specification-Version: 1
+Implementation-Title: DarkCollectiveGit
+Implementation-Version: 1.0.0
+Implementation-Vendor: BlueFFlame, Lightivghi, Kevin
+Implementation-Timestamp: 2024-01-02T23:31:48+0100
+
