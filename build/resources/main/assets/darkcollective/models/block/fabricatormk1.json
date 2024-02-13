@@ -8,7 +8,7 @@
 	},
 	"elements": [
 		{
-			"name": "fabricatorm",
+			"name": "fabricator",
 			"from": [1, 8, -6],
 			"to": [2, 16, -5],
 			"rotation": {"angle": 45, "axis": "x", "origin": [8, 0, 8]},

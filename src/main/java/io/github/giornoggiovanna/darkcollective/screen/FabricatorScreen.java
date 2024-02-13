@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 
-public class FabricatorScreen extends AbstractContainerScreen<FabricatorMenu> {
+public class        FabricatorScreen extends AbstractContainerScreen<FabricatorMenu> {
 
     public static final ResourceLocation TEXTURE =
         new ResourceLocation(DarkCollective.ModID, "textures/gui/fabricatormk1_gui.png");

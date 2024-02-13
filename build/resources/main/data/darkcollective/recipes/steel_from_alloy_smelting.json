@@ -1,0 +1,22 @@
+{
+  "type": "alloy_smelting",
+  "ingredients": [
+    {
+      "count": "4",
+      "item": "minecraft:coal"
+    },
+    {
+      "count": "1",
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "count": "1",
+      "item": "minecraft:charcoal"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "darkcollective:steel_ingot",
+    "experience": 2
+  }
+}

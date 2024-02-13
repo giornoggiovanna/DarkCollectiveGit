@@ -34,7 +34,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
+public class    OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
 
 
     //Properties
@@ -193,7 +193,6 @@ public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
         } else {
             resetProgress();
         }
-        System.out.println("This is the burntime " +this.burnTime);
         if (this.energyStorage.getEnergyStored() < this.energyStorage.getMaxEnergyStored()){
             if(this.burnTime <= 0){
                 if (canBurn(itemHandler.getStackInSlot(ENERGY_SLOT))){
@@ -254,13 +253,13 @@ public class OreRefineryMK1Entity extends BlockEntity implements MenuProvider {
         return this.level.getRecipeManager().getRecipeFor(OreRefineryRecipe.Type.INSTANCE, inventory, level);
     }
 
-    private boolean canInsertItemIntoOutputSlot(Item item) {
-        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() || this.itemHandler.getStackInSlot(OUTPUT_SLOT).is(item);
-    }
+        private boolean canInsertItemIntoOutputSlot(Item item) {
+            return this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() || this.itemHandler.getStackInSlot(OUTPUT_SLOT).is(item);
+        }
 
-    private boolean canInsertAmountIntoOutputSlot(int count) {
-        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count <= this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
-    }
+        private boolean canInsertAmountIntoOutputSlot(int count) {
+            return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count <= this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
+        }
 
     public LazyOptional<ItemStackHandler> getInventoryOptional() {
         return this.inventoryOptional;

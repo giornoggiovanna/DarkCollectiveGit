@@ -5,6 +5,7 @@ import io.github.giornoggiovanna.darkcollective.init.BlockInit;
 import io.github.giornoggiovanna.darkcollective.init.CreativeTabInit;
 import io.github.giornoggiovanna.darkcollective.init.ItemInit;
 import io.github.giornoggiovanna.darkcollective.recipe.RecipeInit;
+import io.github.giornoggiovanna.darkcollective.screen.AlloySmelterScreen;
 import io.github.giornoggiovanna.darkcollective.screen.FabricatorScreen;
 import io.github.giornoggiovanna.darkcollective.screen.MenuTypes;
 import io.github.giornoggiovanna.darkcollective.screen.OreRefineryScreen;
@@ -18,6 +19,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+import java.awt.*;
 import java.awt.image.BufferStrategy;
 
 @Mod(DarkCollective.ModID)
@@ -46,6 +48,7 @@ public class DarkCollective {
 
             MenuScreens.register(MenuTypes.OR_MENU.get(), OreRefineryScreen::new);
             MenuScreens.register(MenuTypes.FAB_MENU.get(), FabricatorScreen::new);
+            MenuScreens.register(MenuTypes.AS_MENU.get(), AlloySmelterScreen::new);
         }
     }
 }

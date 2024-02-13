@@ -48,7 +48,7 @@ public class FabricatorMenu extends AbstractContainerMenu {
             this.addSlot(new SlotItemHandler(iItemHandler, 3, 115, 17));
             this.addSlot(new SlotItemHandler(iItemHandler, 4, 151, 35));
             this.addSlot(new SlotItemHandler(iItemHandler, 5, 79, 62));
-            this.addSlot(new SlotItemHandler(iItemHandler, 6, 42, 62));
+            this.addSlot(new EnergyFuelSlot(iItemHandler, 6, 42, 62));
         });
     }
 

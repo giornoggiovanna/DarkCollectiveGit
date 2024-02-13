@@ -1,0 +1,188 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 2024-02-08 20:56:27
+Description: Exception generating new chunk
+
+java.lang.NullPointerException: Exception generating new chunk
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:889) ~[guava-31.1-jre.jar%23104!/:?] {}
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3965) ~[guava-31.1-jre.jar%23104!/:?] {}
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3989) ~[guava-31.1-jre.jar%23104!/:?] {}
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4950) ~[guava-31.1-jre.jar%23104!/:?] {}
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4956) ~[guava-31.1-jre.jar%23104!/:?] {}
+	at net.minecraft.world.level.block.Block.isShapeFullBlock(Block.java:238) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.block.Block.propagatesSkylightDown(Block.java:242) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.propagatesSkylightDown(BlockBehaviour.java:546) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour.getLightBlock(BlockBehaviour.java:292) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.getLightBlock(BlockBehaviour.java:550) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.lighting.ChunkSkyLightSources.isEdgeOccluded(ChunkSkyLightSources.java:140) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.lighting.ChunkSkyLightSources.findLowestSourceY(ChunkSkyLightSources.java:72) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.lighting.ChunkSkyLightSources.fillFrom(ChunkSkyLightSources.java:46) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.ChunkAccess.initializeLightSources(ChunkAccess.java:462) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.ImposterProtoChunk.initializeLightSources(ImposterProtoChunk.java:246) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.ChunkStatus.initializeLight(ChunkStatus.java:120) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.chunk.ChunkStatus.lambda$static$13(ChunkStatus.java:116) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.chunk.ChunkStatus.load(ChunkStatus.java:264) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ChunkMap.lambda$scheduleChunkGeneration$27(ChunkMap.java:639) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-6.0.8.jar%23134!/:?] {}
+	at net.minecraft.server.level.ChunkMap.lambda$scheduleChunkGeneration$29(ChunkMap.java:634) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.level.ChunkTaskPriorityQueueSorter.lambda$message$1(ChunkTaskPriorityQueueSorter.java:62) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.util.thread.ProcessorMailbox.pollTask(ProcessorMailbox.java:91) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.util.thread.ProcessorMailbox.pollUntil(ProcessorMailbox.java:146) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.util.thread.ProcessorMailbox.run(ProcessorMailbox.java:102) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1395) ~[?:?] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?] {}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:889) ~[guava-31.1-jre.jar%23104!/:?] {}
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3965) ~[guava-31.1-jre.jar%23104!/:?] {}
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3989) ~[guava-31.1-jre.jar%23104!/:?] {}
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4950) ~[guava-31.1-jre.jar%23104!/:?] {}
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4956) ~[guava-31.1-jre.jar%23104!/:?] {}
+	at net.minecraft.world.level.block.Block.isShapeFullBlock(Block.java:238) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.block.Block.propagatesSkylightDown(Block.java:242) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.propagatesSkylightDown(BlockBehaviour.java:546) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour.getLightBlock(BlockBehaviour.java:292) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.getLightBlock(BlockBehaviour.java:550) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.lighting.ChunkSkyLightSources.isEdgeOccluded(ChunkSkyLightSources.java:140) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.lighting.ChunkSkyLightSources.findLowestSourceY(ChunkSkyLightSources.java:72) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.lighting.ChunkSkyLightSources.fillFrom(ChunkSkyLightSources.java:46) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.ChunkAccess.initializeLightSources(ChunkAccess.java:462) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.ImposterProtoChunk.initializeLightSources(ImposterProtoChunk.java:246) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.ChunkStatus.initializeLight(ChunkStatus.java:120) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.chunk.ChunkStatus.lambda$static$13(ChunkStatus.java:116) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.chunk.ChunkStatus.load(ChunkStatus.java:264) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ChunkMap.lambda$scheduleChunkGeneration$27(ChunkMap.java:639) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-6.0.8.jar%23134!/:?] {}
+	at net.minecraft.server.level.ChunkMap.lambda$scheduleChunkGeneration$29(ChunkMap.java:634) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.level.ChunkTaskPriorityQueueSorter.lambda$message$1(ChunkTaskPriorityQueueSorter.java:62) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.util.thread.ProcessorMailbox.pollTask(ProcessorMailbox.java:91) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.util.thread.ProcessorMailbox.pollUntil(ProcessorMailbox.java:146) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.util.thread.ProcessorMailbox.run(ProcessorMailbox.java:102) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+-- Chunk to be generated --
+Details:
+	Location: 0,0
+	Position hash: 0
+	Generator: net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator@5b10af09
+Stacktrace:
+	at net.minecraft.server.level.ChunkMap.lambda$scheduleChunkGeneration$27(ChunkMap.java:639) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-6.0.8.jar%23134!/:?] {}
+	at net.minecraft.server.level.ChunkMap.lambda$scheduleChunkGeneration$29(ChunkMap.java:634) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.level.ChunkTaskPriorityQueueSorter.lambda$message$1(ChunkTaskPriorityQueueSorter.java:62) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.util.thread.ProcessorMailbox.pollTask(ProcessorMailbox.java:91) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.util.thread.ProcessorMailbox.pollUntil(ProcessorMailbox.java:146) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at net.minecraft.util.thread.ProcessorMailbox.run(ProcessorMailbox.java:102) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading}
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1395) ~[?:?] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?] {}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?] {}
+
+
+-- Affected level --
+Details:
+	All players: 0 total; []
+	Chunk stats: 2209
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,66,0), Section: (at 0,2,0 in 0,4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 29148 game time, 29148 day time
+	Level name: New World
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 120446 (now: false), thunder time: 131291 (now: false)
+	Known server brands: forge
+	Removed feature flags: 
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:898) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:816) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:89) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:663) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20-46.0.14_mapped_official_1.20.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:840) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20
+	Minecraft Version ID: 1.20
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 17.0.9, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 834937024 bytes (796 MiB) / 1996488704 bytes (1904 MiB) up to 8543797248 bytes (8148 MiB)
+	CPUs: 16
+	Processor Vendor: GenuineIntel
+	Processor Name: 13th Gen Intel(R) Core(TM) i5-13400F
+	Identifier: Intel64 Family 6 Model 191 Stepping 2
+	Microarchitecture: unknown
+	Frequency (GHz): 2.50
+	Number of physical packages: 1
+	Number of physical CPUs: 10
+	Number of logical CPUs: 16
+	Graphics card #0 name: NVIDIA GeForce RTX 3060
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x2504
+	Graphics card #0 versionInfo: DriverVersion=31.0.15.4633
+	Memory slot #0 capacity (MB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 3.20
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 34629.43
+	Virtual memory used (MB): 16635.67
+	Swap memory total (MB): 2048.00
+	Swap memory used (MB): 38.24
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Server Running: true
+	Player Count: 0 / 8; []
+	Data Packs: vanilla, mod:darkcollective, mod:forge, mod:geckolib
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Launched Version: MOD_DEV
+	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.3.jar eventbus PLUGINSERVICE 
+		fmlloader-1.20-46.0.14.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.20-46.0.14.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.20-46.0.14.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.20-46.0.14.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.20-46.0.14.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.9.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		forge-1.20-46.0.14_mapped_official_1.20.jar       |Minecraft                     |minecraft                     |1.20                |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |Dark Collective               |darkcollective                |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		                                                  |Forge                         |forge                         |46.0.14             |DONE      |Manifest: NOSIGNATURE
+		geckolib-forge-1.20.1-4.2.2_mapped_official_1.20.j|GeckoLib 4                    |geckolib                      |4.2.2               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: e15f1466-f60b-4fb0-bfb1-ea821aa05728
+	FML: 46.0
+	Forge: net.minecraftforge:46.0.14

@@ -1,19 +1,18 @@
 package io.github.giornoggiovanna.darkcollective.init;
 
 import io.github.giornoggiovanna.darkcollective.DarkCollective;
+import io.github.giornoggiovanna.darkcollective.blocks.AlloySmelterMK1;
 import io.github.giornoggiovanna.darkcollective.blocks.BlackStandBlock;
 import io.github.giornoggiovanna.darkcollective.blocks.FabricatorMK1;
 import io.github.giornoggiovanna.darkcollective.blocks.OreRefineryMK1;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.RegistryObject;
 
 public class BlockInit {
@@ -100,6 +99,10 @@ public class BlockInit {
             .mapColor(MapColor.COLOR_BLACK)
             .requiresCorrectToolForDrops()
             .pushReaction(PushReaction.IGNORE)
+    ));
+
+    public static final RegistryObject<Block> ALLOY_SMELTERMK1 = BLOCKS.register("alloy_smeltermk1", () -> new AlloySmelterMK1(BlockBehaviour.Properties.of()
+            .dynamicShape()
     ));
 
     public static final RegistryObject<Block> TITANIUM_ORE = BLOCKS.register("titanium_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)));

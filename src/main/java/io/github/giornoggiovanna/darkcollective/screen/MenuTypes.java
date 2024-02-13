@@ -20,4 +20,6 @@ public class MenuTypes{
     public static final RegistryObject<MenuType> OR_MENU = MENUS.register("or_menu", () -> IForgeMenuType.create(OreRefineryMenu::new));
 
     public static final RegistryObject<MenuType> FAB_MENU = MENUS.register("fab_menu", ()-> IForgeMenuType.create(FabricatorMenu::new));
+
+    public static final RegistryObject<MenuType> AS_MENU = MENUS.register("as_menu", ()-> IForgeMenuType.create(AlloySmelterMenu::new));
 }

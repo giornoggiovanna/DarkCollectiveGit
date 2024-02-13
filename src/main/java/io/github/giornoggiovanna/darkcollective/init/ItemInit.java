@@ -275,6 +275,9 @@ public class ItemInit {
     public static final RegistryObject<BlockItem> FABRICATORMK1 = addToTab(ITEMS.register("fabricatormk1",
             ()-> new BlockItem(BlockInit.FABRICATORMK1.get(), new Item.Properties())));
 
+    public static final RegistryObject<BlockItem> ALLOY_SMELTERMK1 = addToTab(ITEMS.register("alloy_smeltermk1",
+            ()-> new BlockItem(BlockInit.ALLOY_SMELTERMK1.get(), new Item.Properties())));
+
     public static final RegistryObject<BlockItem> MOTHERSHIP_DARKTILES = addToTab(ITEMS.register("mothership_darktiles",
             ()-> new BlockItem(BlockInit.MOTHERSHIP_DARKTILES.get(), new Item.Properties())));
 

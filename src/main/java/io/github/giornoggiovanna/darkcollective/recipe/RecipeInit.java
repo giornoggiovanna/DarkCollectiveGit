@@ -16,7 +16,7 @@ public class RecipeInit {
     public static final RegistryObject<RecipeSerializer<FabricatorRecipe>> FABRICATOR_SERIALIZER = SERIALIZERS.register
             ("fabricating",
             ()-> FabricatorRecipe.Serializer.INSTANCE);
-
-
-
+    public static final RegistryObject<RecipeSerializer<AlloySmelterRecipe>> ALLOY_SMELTER_SERIALZER = SERIALIZERS.register(
+            "alloy_smelting",
+            ()-> AlloySmelterRecipe.Serializer.INSTANCE);
 }

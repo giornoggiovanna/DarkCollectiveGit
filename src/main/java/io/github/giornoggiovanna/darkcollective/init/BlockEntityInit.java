@@ -1,6 +1,7 @@
 package io.github.giornoggiovanna.darkcollective.init;
 
 import io.github.giornoggiovanna.darkcollective.DarkCollective;
+import io.github.giornoggiovanna.darkcollective.blockentity.AlloySmelterMK1Entity;
 import io.github.giornoggiovanna.darkcollective.blockentity.FabricatorMK1Entity;
 import io.github.giornoggiovanna.darkcollective.blockentity.OreRefineryMK1Entity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -20,4 +21,9 @@ public class BlockEntityInit {
             ()-> BlockEntityType.Builder.of(FabricatorMK1Entity::new, BlockInit.FABRICATORMK1.get())
                     .build(null)
     );
+
+    public static final RegistryObject<BlockEntityType<AlloySmelterMK1Entity>> ALLOY_SMELTERMK1_ENTITY = BLOCK_ENTITIES.register("alloy_smeltermk1_entity",
+            ()-> BlockEntityType.Builder.of(AlloySmelterMK1Entity::new, BlockInit.ALLOY_SMELTERMK1.get())
+                    .build(null)
+            );
 }

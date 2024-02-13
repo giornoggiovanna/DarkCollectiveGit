@@ -39,7 +39,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-public class FabricatorMK1Entity extends BlockEntity implements MenuProvider {
+public class    FabricatorMK1Entity extends BlockEntity implements MenuProvider {
     
 
     //Properties
@@ -205,7 +205,6 @@ public class FabricatorMK1Entity extends BlockEntity implements MenuProvider {
         } else {
             resetProgress();
         }
-        System.out.println("This is the burntime " +this.burnTime);
         if (this.energyStorage.getEnergyStored() < this.energyStorage.getMaxEnergyStored()){
             if(this.burnTime <= 0){
                 if (canBurn(itemHandler.getStackInSlot(ENERGY_SLOT))){
