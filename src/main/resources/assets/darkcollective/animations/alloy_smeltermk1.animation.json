@@ -1,0 +1,28 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.alloykiln_mk1.idletemp": {
+			"loop": true,
+			"animation_length": 1,
+			"start_delay": "0",
+			"loop_delay": "0",
+			"bones": {
+				"lava2": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 2.4]
+						},
+						"1.0": {
+							"vector": [0, 0, 3.4]
+						}
+					},
+					"scale": {
+						"vector": [1, 1, 1]
+					}
+				}
+			},
+			"particle_effects": {}
+		}
+	},
+	"geckolib_format_version": 2
+}

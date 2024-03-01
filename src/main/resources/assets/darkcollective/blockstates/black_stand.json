@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": {"model": "darkcollective:block/black_stand" }
+    "facing=north": {"model": "darkcollective:block/black_stand" },
+    "facing=east": {"model": "darkcollective:block/black_stand", "y":  90},
+    "facing=south": {"model": "darkcollective:block/black_stand", "y": 180 },
+    "facing=west": {"model": "darkcollective:block/black_stand", "y": 270 }
   }
 }

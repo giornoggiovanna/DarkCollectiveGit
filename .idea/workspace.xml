@@ -5,23 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fe7202a-9b66-44e8-80e2-77a7e7b798a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blockentity/AlloySmelterMK1Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blocks/AlloySmelterMK1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/recipe/AlloySmelterRecipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/screen/AlloySmelterMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/screen/AlloySmelterScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/screen/slot/AlloySmelterFuelSlot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/geo/alloy_smeltermk1.geo.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/geo/fabricatormk1.geo.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/models/item/alloy_smeltermk1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/textures/block/alloy_smeltermk1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/textures/gui/alloy_smeltermk1_gui.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/darkcollective/loot_tables/blocks/alloy_smeltermk1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/darkcollective/loot_tables/blocks/fabricatormk1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/darkcollective/recipes/steel_from_alloy_smelting.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/crash-reports/crash-2024-02-16_17.46.48-client.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-02-13-2.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-02-16-1.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-02-16-2.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-02-16-3.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-02-16-4.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-02-16-5.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-02-16-6.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-02-16-7.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blockentity/client/AlloySmelterMk1Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blockentity/client/AlloySmelterMk1Renderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/entity/Harvester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/init/EntityInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/animations/alloy_smeltermk1.animation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/blockstates/alloy_smeltermk1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/blockstates/fabricatormk1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/models/block/alloy_smeltermk1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -29,28 +31,38 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/DarkCollective$ClientModEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/DarkCollective$ClientModEvents.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/DarkCollective.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/DarkCollective.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blockentity/FabricatorMK1Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blockentity/FabricatorMK1Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blockentity/OreRefineryMK1Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blockentity/OreRefineryMK1Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blocks/FabricatorMK1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blocks/FabricatorMK1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/init/BlockEntityInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/init/BlockEntityInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/init/BlockInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/init/BlockInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/init/ItemInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/init/ItemInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/recipe/RecipeInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/recipe/RecipeInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/screen/FabricatorMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/screen/FabricatorMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/screen/MenuTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/screen/MenuTypes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/darkcollective/models/block/fabricatormk1.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/darkcollective/models/block/fabricatormk1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/darkcollective/recipes/basic_energy_core_from_fabricating.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/darkcollective/recipes/basic_energy_core_from_fabricating.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DarkCollective$ClientModEvents.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DarkCollective.class.uniqueId4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FabricatorRecipe$Serializer.class.uniqueId5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FabricatorRecipe$Type.class.uniqueId3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FabricatorRecipe.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/RecipeInit.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blockentity/AlloySmelterMK1Entity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blockentity/AlloySmelterMK1Entity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blockentity/AlloySmelterMK1Entity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blockentity/AlloySmelterMK1Entity$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blockentity/AlloySmelterMK1Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blockentity/AlloySmelterMK1Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blocks/AlloySmelterMK1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/github/giornoggiovanna/darkcollective/blocks/AlloySmelterMK1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/darkcollective/blockstates/black_stand.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/darkcollective/blockstates/black_stand.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/darkcollective/geo/alloy_smeltermk1.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/darkcollective/geo/alloy_smeltermk1.geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AlloySmelterMK1.class.uniqueId7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AlloySmelterMK1Entity$1.class.uniqueId12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AlloySmelterMK1Entity$2.class.uniqueId16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AlloySmelterMK1Entity.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AlloySmelterMenu.class.uniqueId8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AlloySmelterScreen.class.uniqueId6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BlockEntityInit.class.uniqueId15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DarkCollective$ClientModEvents.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DarkCollective.class.uniqueId14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FabricatorMK1.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FabricatorMK1Entity$1.class.uniqueId17" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FabricatorMK1Entity$2.class.uniqueId10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FabricatorMK1Entity.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MenuTypes.class.uniqueId11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/OreRefineryMK1.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/OreRefineryMK1Entity$1.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/OreRefineryMK1Entity$2.class.uniqueId9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/OreRefineryMK1Entity.class.uniqueId13" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-02-08-1.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-02-08-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-02-08-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-02-08-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-02-08-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-02-08-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-02-08-4.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
@@ -58,40 +70,29 @@
       <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/DIM-1/data/raids.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/DIM1/data/raids_end.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/advancements/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/data/raids.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/random_sequences.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/data/random_sequences.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/DIM-1/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/DIM1/data/raids_end.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/data/random_sequences.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/data/random_sequences.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/entities/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/entities/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/entities/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/entities/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/entities/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/test2/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/test2/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/DarkCollective.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/DarkCollective.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blockentity/FabricatorMK1Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blockentity/FabricatorMK1Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blockentity/OreRefineryMK1Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blockentity/OreRefineryMK1Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blocks/FabricatorMK1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blocks/FabricatorMK1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/init/BlockEntityInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/init/BlockEntityInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/init/BlockInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/init/BlockInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/init/ItemInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/init/ItemInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/recipe/FabricatorRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/recipe/FabricatorRecipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/recipe/RecipeInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/recipe/RecipeInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/screen/FabricatorMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/screen/FabricatorMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/screen/FabricatorScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/screen/FabricatorScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/screen/MenuTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/screen/MenuTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/models/block/fabricatormk1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/models/block/fabricatormk1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/darkcollective/recipes/basic_energy_core_from_fabricating.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/darkcollective/recipes/basic_energy_core_from_fabricating.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blockentity/AlloySmelterMK1Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blockentity/AlloySmelterMK1Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blocks/AlloySmelterMK1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/giornoggiovanna/darkcollective/blocks/AlloySmelterMK1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/blockstates/black_stand.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/blockstates/black_stand.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/geo/alloy_smeltermk1.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/darkcollective/geo/alloy_smeltermk1.geo.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,12 +154,16 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2aP1elbDeDBF76h2b6t2kTeq1AH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Gradle.DarkCollectiveGit [:createMcpToSrg :createMcpToSrg :createMcpToSrg].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.DarkCollectiveGit [buildEnvironment].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.DarkCollectiveGit [build].executor&quot;: &quot;Run&quot;,
@@ -179,6 +184,9 @@
       <recent name="C:\Users\Hayden\Documents\Modding\DarkCollectiveGit\src\main\resources\assets\darkcollective\textures\gui" />
       <recent name="C:\Users\Hayden\Documents\Modding\DarkCollectiveGit\src\main\resources\data\darkcollective\loot_tables\blocks" />
       <recent name="C:\Users\Hayden\Documents\Modding\DarkCollectiveGit\src\main\resources\assets\darkcollective\models\item" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hayden\Documents\Modding\DarkCollectiveGit\src\main\resources\assets\darkcollective\animations" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.DarkCollectiveGit [runClient]">
@@ -253,5 +261,8 @@
       <updated>1704205498308</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

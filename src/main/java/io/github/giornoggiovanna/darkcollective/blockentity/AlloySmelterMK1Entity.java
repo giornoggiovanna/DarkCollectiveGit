@@ -30,10 +30,16 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import software.bernie.geckolib.core.animatable.GeoAnimatable;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.*;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.util.RenderUtils;
 
 import java.util.Optional;
 
-public class AlloySmelterMK1Entity extends BlockEntity implements MenuProvider {
+public class AlloySmelterMK1Entity extends BlockEntity implements MenuProvider, GeoAnimatable {
 
     public static final int INPUT_SLOT1 = 0;
     public static final int INPUT_SLOT2 = 1;
@@ -55,6 +61,8 @@ public class AlloySmelterMK1Entity extends BlockEntity implements MenuProvider {
     private int progress = 0;
     private int maxProgress = 78;
     private int burnTime = 0, maxBurnTime = 0;
+
+    private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
 
     public AlloySmelterMK1Entity(BlockPos pos, BlockState state) {
@@ -267,5 +275,26 @@ public class AlloySmelterMK1Entity extends BlockEntity implements MenuProvider {
 
     private boolean canInsertAmountIntoOutputSlot(int count) {
         return this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + count <= this.itemHandler.getStackInSlot(OUTPUT_SLOT).getMaxStackSize();
+    }
+
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
+        controllerRegistrar.add(new AnimationController<>(this, "controller", 0, this::predicate));
+    }
+
+    private <T extends GeoAnimatable> PlayState predicate(AnimationState<T> tAnimationState) {
+        tAnimationState.getController().setAnimation(RawAnimation.begin().then("idletemp", Animation.LoopType.LOOP));
+        return PlayState.CONTINUE;
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+
+        return cache;
+    }
+
+    @Override
+    public double getTick(Object o) {
+        return RenderUtils.getCurrentTick();
     }
 }
